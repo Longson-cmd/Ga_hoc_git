@@ -1,0 +1,29 @@
+
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    @property
+    def fullname(self):
+        return f'{self.brand} {self.model}'
+    @fullname.setter
+    def fullname(self, ten_xe):
+        brand, model = ten_xe.split()
+        self.brand = brand
+        self.model = model
+    @fullname.deleter
+    def fullname(self):
+        self.brand = None
+        self.model = None
+        print('xóa fullname')
+car1 = Car('Toyota', 'nexus')
+ten_xe1 = 'BMV IB2'
+car1.fullname = ten_xe1
+print(car1.fullname)
+
+del car1.fullname
+print(car1.brand, car1.model)
+    
+# car1 = Car('Toyota', 'nexus')
+# print(car1.fullname)

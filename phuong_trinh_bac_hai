@@ -1,0 +1,34 @@
+# " r ",for reading
+# " w ", for writng
+# " a ", for appending
+# " r+ ", for both reading and writing
+
+
+# nhập nhiều số vào cùng một lúc
+import math
+a, b, c = map(float, input().split())
+delta = b*b - 4*a*c
+if a == 0:
+    if b == 0:
+        if c == 0:
+            print('Phuong trinh co vo so nghiem')
+        else:
+            print('Phuong trinh vo nghiem')
+    else:
+        print('Phuong trinh co mot nghiem duy nhat: x =', -c/b)
+else:
+    if delta < 0:
+        print('Phuong trinh vo nghiem')
+    elif delta == 0:
+        print(f'Phuong trinh co nghiem kep: x1 = x2 = {-b/(2*a)}')
+    else:
+        print(f'Phuong trinh co hai nghiem phan biet la:\nx1 = {(-b +math.sqrt(delta))/(2*a)}\nx2 = {(-b - math.sqrt(delta))/(2*a)}')
+
+
+
+
+
+
+
+       
+

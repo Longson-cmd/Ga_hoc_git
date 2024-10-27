@@ -1,0 +1,3 @@
+# kí hiệu thư viện math bằng m
+import math as m
+print(m.pi)
