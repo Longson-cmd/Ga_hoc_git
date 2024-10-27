@@ -38,7 +38,7 @@ class Manager(Employee):
         if emp not in self.employees:
             self.employees.remove(emp)
         return self.employees
-    
+# thay đổi nội dung  
 manager1 = Manager('Phu', 'Trong', 1000, [dev1, dev2])
 manager1.remove(dev2)
 print(manager1.employees[0].fullname())
